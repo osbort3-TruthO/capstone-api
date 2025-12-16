@@ -72,7 +72,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
     public Category create(Category category)
     {
         // create a new category
-        return null;
+        return category;
     }
 
     @Override
