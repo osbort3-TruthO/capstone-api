@@ -99,12 +99,7 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
     @Override
     public Product getById(int productId)
     {
-        String sql = """
-    SELECT * FROM products
-    WHERE (? IS NULL OR category_id = ?)
-      AND (? IS NULL OR price >= ?)
-      AND (? IS NULL OR price <= ?)
-      AND (? = '' OR subcategory = ?)""";
+        String sql = "SELECT * FROM products WHERE product_id = ?";
 
         try (Connection connection = getConnection())
         {
