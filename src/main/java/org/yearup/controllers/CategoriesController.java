@@ -94,7 +94,7 @@ public class CategoriesController
     // add annotation to ensure that only an ADMIN can call this function
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)  // Change to OK (200)
     public void deleteCategory(@PathVariable int id)
     {
         // delete the category by id
